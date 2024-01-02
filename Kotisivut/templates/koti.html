@@ -1,0 +1,73 @@
+{% extends "base.html" %} 
+{% block title %}Etusivu{% endblock %} 
+{% block content %} 
+<head>
+<title>Kuka olen?</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .text {
+        flex-basis: 75%;
+        text-align: left;
+        font-family: sans-serif;
+        padding: 20px;
+    }
+    h4 {
+        margin-bottom: 10px;
+    }
+    .text p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    .image {
+        flex-basis: 45%;
+        text-align: right;
+        padding: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 200px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+
+            <h4>Kuka olen?</h4>
+            <p>Olen Elias, kolmannen vuoden tietojärjestelmätieteen opiskelija.</p>
+
+            <h4>Kiinnostuksen kohteeni?</h4>
+
+            <p>Opinnoissani olen keskittynyt vahvasti ohjelmointiin. </p>
+
+            <p>Pidän ongelmanratkaisusta ja uuden oppimisesta. 
+                Ohjelmoinnista on tullut minulle harrastus, ja nämä sivut ovat yksi esimerkki siitä.</p> 
+            <p>Vapaa-ajallani harrastan ja seuraan urheilua. </p>
+
+            <h4>Millaista ohjelmointikokemusta minulla on?</h4>
+            <p>Vahvimmat kieleni ovat C#, Java ja Python.</p>
+            <p>Eniten kokemusta minulla on Javasta, jolla olen myös harrastusmuotoisesti opetellut
+                mobiilikehitystä Android-pohjalle. 
+            </p>
+            <p>Mukavimpana koen Pythonin kirjoittamisen. Tämän sivun backendin olen kirjoittanut Pythonilla 
+                ja frontendin HTML:llä, jonka olen myös tässä lennosta opetellut!
+            </p>
+            <h4>Relevantit kurssit?</h4>
+            <p>Ohjelmointi 1 (5op): Arvosana 3.</p>
+            <p>Ohjelmointi 2 (8op): Arvosana 5.</p>
+            <p>Python-kurssi (5op): Arvosana 5.</p>
+            <p>Python-jatkokurssi (5op): Arviointi vielä kesken.</p>
+            <p>Tietokannat ja tiedonhallinta: vielä menossa.</p>
+        </div>
+    </div>
+    <div class="image">
+        <img src="https://media.licdn.com/dms/image/C4D03AQHUojKY8mBNuA/profile-displayphoto-shrink_800_800/0/1651877232794?e=1709769600&v=beta&t=1ESLwxlmNViUUFThgYQVURKleicHoRKpVZetwP7p004" alt="Omakuva">
+    </div>
+
+</body>
+
+{% endblock %}

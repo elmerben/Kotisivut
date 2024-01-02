@@ -1,0 +1,105 @@
+{% extends "base.html" %} 
+{% block title %}Etusivu{% endblock %} 
+{% block content %} 
+<style>
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .project {
+        flex-basis: 45%;
+        margin: 2%;
+        text-align: left;
+    }
+    .text {
+        flex-basis: 45%;
+        text-align: left;
+        font-family: sans-serif;
+        padding: 20px;
+    }
+    h3 {
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    h4 {
+        margin-bottom: 10px;
+        margin-top: 30px;
+
+    }
+    .text p, .project a {
+        margin-bottom: 15px;
+        line-height: 1.6;
+        margin-left: 18px;
+    }
+    .image {
+        flex-basis: 45%;
+        text-align: right;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .pystykuva {
+        max-width: 33%;
+        height: auto;
+    }
+</style>
+<body>
+    <h3>Esimerkkejä projekteista</h3>
+    <div class="container">
+        <div class="project">
+            <h4>Golf-tietokanta</h4>
+            <p>Javalla kirjoitettu ohjelma, johon voi lisätä pelaajia ja heidän tuloksia.</p>
+            <p>Tietokanta ylläpitää pelaajien tuloksia ja tasoitusta.</p>
+            <p>Frontend tehty XML:n avulla.</p>
+            <p>Github: https://github.com/elmerben/Golf-Database </p>
+            <div class="image">
+                <img src="{{ url_for('static', filename='sisalto/projekti1.jpg') }}" alt="Projekti 1"> </div>
+            
+            <h4>Tämä nettisivusto</h4>
+            <p>Frontend: HTML ja hieman CSS. Backend: Python</p>
+            <p>Sivusto on suht yksinkertainen, mutta merkittävä projekti itselle. Aikaisempi kokemus frontista 
+                oli hyvin kevyttä ennen tätä. Youtuben ja päättäväisyyden avulla sain mielestäni mukavan 
+                pohjan rakennettua. Tästä on hyvä lähteä luomaan lisää monimutkaisuutta sivulle taitojen kehittyessä.
+            </p>
+            <p>OHJ2- ja Python-jatkokurssin päättymisestä on vain muutama viikko aikaa ja ne ovat vieneet 
+                merkittävän osan tehokkaasta ajasta. Tämän sivun tein nopeasti muutamassa tunnissa, sillä halusin 
+            näyttää osaavani tehdä jotain täysin tyhjästä. Myöskin kouluprojektien ulkopuolella. </p>
+
+            <h4>Peliprojektit</h4>
+            <p>Sekä C#:lla, että Pythonilla olen tehnyt peliohjelmointia luoden 2-ulotteisia pelejä. Pythonilla
+                luonnollisesti käyttäen Pygame-kirjastoa.
+            </p>
+            <img src="{{ url_for('static', filename='sisalto/projekti3.jpg') }}" alt="Projekti 3">
+            <img src="{{ url_for('static', filename='sisalto/projekti4.jpg') }}" alt="Projekti 4">
+
+
+        </div>
+
+        <div class="project">
+            <h4>Shakkikello Androidille</h4>
+            <p>Javalla kirjoitettu Android-sovellus. Frontend tehty XML:llä.</p>
+            <p>Sovellus kysyy kokonaispeliaikaa minuuteissa. Sen jälkeen sovellus asettaa kellon 
+                tähän ajankohtaan ja toimii normaalin shakkikellon tapaan.
+            </p>
+            <p>Github: https://github.com/elmerben/Shakkikello</p>
+            <img src="{{ url_for('static', filename='sisalto/projekti2.jpg') }}" alt="Projekti 1" class="pystykuva">
+            <h4>Datan käsittelyä</h4>
+            <p>Pythonilla datan käsittely ja jäsentäminen on tullut tutuksi. Esimerkiksi JSON-tiedostojen 
+                läpikäyntiä ja perkaamista olen tehnyt.
+            </p>
+            <p>Esimerkki projektista: https://github.com/elmerben/NHLdata </p>
+
+            <h4>Selenium, Android ja muut projektit</h4>
+            <p>Tällä hetkellä olen kehittämässä Golf-tietokannasta mobiiliversiota pelituloksille.
+                Projektissa hyödynnän Androidille tyypillistä SQLite-tietokantaa tulosten säilyttämiseen.
+            </p>
+            <p>Projektin etenemiseen voi tutustua täällä: https://github.com/elmerben/Golf-Klubben</p>
+            <p>Sen lisäksi työn alla on Pythonin Selenium-kirjastolla Liiga-sivujen pelitulosten seuraamiseen
+                 tarkoitettu sovellus. 
+            </p>
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "base.html" %} 
+{% block title %}Etusivu{% endblock %} 
+{% block content %} 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vieraskirja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .kommentit {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 15px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .kommentti {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-container {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="kommentit">
+        {% for kommentti in kommentit %}
+        <div class="kommentti">
+            <strong>{{ kommentti.kayttajanimi }}</strong> ({{ kommentti.paivays.strftime('%d-%m-%Y %H:%M') }}):<br>
+            {{ kommentti.kommentti }}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="form-container">
+        <form action="/laheta-kommentti" method="post">
+            <label for="kayttajanimi">Käyttäjänimi:</label><br>
+            <input type="text" id="kayttajanimi" name="kayttajanimi" required><br>
+
+            <label for="kommentti">Kommentti:</label><br>
+            <textarea id="kommentti" name="kommentti" required></textarea><br>
+
+            <input type="submit" value="Lähetä">
+        </form>
+    </div>
+</body>
+{% endblock %}
