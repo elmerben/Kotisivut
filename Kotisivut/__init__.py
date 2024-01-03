@@ -8,7 +8,7 @@ KANTA_NIMI = "database.db"
 
 def sovellus():
     paasovellus = Flask(__name__)
-    paasovellus.config["SALAUSAVAIN"] = "*SALAINEN*"
+    paasovellus.config["SALAUSAVAIN"] = "kasd2i5hasd1983rf"
     paasovellus.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{KANTA_NIMI}'
     db.init_app(paasovellus)
 
