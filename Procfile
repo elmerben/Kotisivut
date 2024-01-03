@@ -1,1 +1,1 @@
-﻿web: gunicorn __init__:sovellus
+﻿web: gunicorn Kotisivut:sovellus
