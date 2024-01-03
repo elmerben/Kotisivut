@@ -1,1 +1,1 @@
-﻿web: gunicorn 'app:sivut'
+﻿web: gunicorn app:sivut
