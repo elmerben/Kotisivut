@@ -1,1 +1,1 @@
-﻿web: gunicorn 'Kotisivut:sovellus'
+﻿web: gunicorn 'app:sivut'
