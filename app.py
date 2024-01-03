@@ -2,6 +2,10 @@
 
 from Kotisivut import sovellus
 
-if __name__ == "__main__":
-    sivut = sovellus()
-    sivut.run(debug=True)
+# if __name__ == "__main__":
+#     sivut = sovellus()
+#     sivut.run(debug=True)
+
+sivut = sovellus()
+sivut.run(debug=True)
+
