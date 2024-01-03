@@ -1,1 +1,1 @@
-﻿web: gunicorn app:sovellus
+﻿web: gunicorn __init__:sovellus
